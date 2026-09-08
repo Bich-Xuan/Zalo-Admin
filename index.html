@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đang chuyển hướng tới Zalo...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f4f5f7;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0068ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p>Đang chuyển tới Zalo, vui lòng đợi vài giây...</p>
+  <a class="btn" id="openBtn" href="https://zalo.me/0865385027">Bấm vào đây nếu không tự mở</a>
+
+  <script>
+    const phone = "0865385027";
+    const deepLink = "zalo://conversation?phone=" + phone;
+    const webLink = "https://zalo.me/" + phone;
+
+    window.location.href = deepLink;
+
+    setTimeout(function() {
+      window.location.href = webLink;
+    }, 1500);
+  </script>
+</body>
+</html>
